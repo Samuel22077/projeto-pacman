@@ -1,0 +1,72 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #000;
+  font-family: 'Press Start 2P', monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  color: #fff;
+}
+
+.logo {
+  font-size: clamp(32px, 7vw, 56px);
+  color: #FFE000;
+  letter-spacing: 6px;
+  text-shadow: 3px 3px 0 #b8a000;
+}
+
+.subtitle {
+  font-size: clamp(7px, 1.5vw, 11px);
+  color: #ffb8ff;
+  letter-spacing: 3px;
+}
+
+.points-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: clamp(7px, 1.3vw, 10px);
+}
+
+.points-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pts-label { color: #FFE000; width: 70px; text-align: right; }
+.pts-name  { color: #fff; }
+
+.press-enter {
+  font-size: clamp(8px, 1.5vw, 12px);
+  color: #FFE000;
+  letter-spacing: 2px;
+  animation: blink 0.9s step-start infinite;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.credits {
+  font-size: clamp(5px, 1vw, 7px);
+  color: #444;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 2;
+}
+
+.dot-divider {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dp { width: 6px; height: 6px; border-radius: 50%; background: #ffb8ae; }
+.dp.big { width: 12px; height: 12px; }
