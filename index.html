@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <title>PAC-MAN</title>
+
+    <!-- Fonte arcade do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Arquivo de estilos separado -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- Título do jogo -->
+    <h1>PAC-MAN</h1>
+
+    <!-- Painel de pontos, vidas e nível -->
+    <div id="info">
+      PONTOS <span id="sPontos">0</span> &nbsp;|&nbsp;
+      VIDAS  <span id="sVidas">3</span>  &nbsp;|&nbsp;
+      NIVEL  <span id="sNivel">1</span>
+    </div>
+
+    <!-- Canvas: é aqui que o jogo é desenhado via JavaScript -->
+    <canvas id="tela" width="640" height="704"></canvas>
+
+    <!-- Tela inicial e tela de game over -->
+    <div id="overlay">
+      <h2>PAC-MAN</h2>
+      <button id="btnJogar">&#9654; JOGAR</button>
+    </div>
+
+    <!-- Arquivo JavaScript separado (carregado no final do body) -->
+    <script src="game.js"></script>
+
+  </body>
+</html>

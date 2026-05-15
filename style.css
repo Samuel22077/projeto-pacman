@@ -1,0 +1,107 @@
+/* ================================================================
+   pacman.css — Estilos visuais do jogo PAC-MAN
+================================================================ */
+
+
+/* ── reset geral ────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ── corpo da página ────────────────────────────────────────── */
+body {
+  background: #0a0a0f;              /* fundo preto azulado */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Press Start 2P", monospace;
+  color: #fff;
+}
+
+
+/* ── título PAC-MAN ─────────────────────────────────────────── */
+h1 {
+  font-size: 24px;
+  color: #FFD700;                   /* amarelo clássico */
+  text-shadow: 0 0 18px #FFD70099; /* brilho dourado */
+  margin-bottom: 10px;
+  letter-spacing: 5px;
+}
+
+
+/* ── painel de pontos, vidas e nível ────────────────────────── */
+#info {
+  display: flex;
+  gap: 20px;
+  font-size: 9px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+/* valores numéricos em amarelo */
+#info span {
+  color: #FFD700;
+}
+
+
+/* ── canvas onde o jogo é desenhado ─────────────────────────── */
+canvas {
+  display: block;
+  border: 2px solid #1a1a3e;
+  border-radius: 8px;
+  box-shadow: 0 0 36px #0055ff44;  /* brilho azul em volta */
+}
+
+
+/* ── overlay: tela inicial e game over ──────────────────────── */
+#overlay {
+  position: fixed;
+  inset: 0;                         /* cobre a tela toda */
+  background: #0a0a0fbb;            /* fundo semitransparente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* esconde o overlay quando o atributo hidden está presente */
+#overlay[hidden] {
+  display: none;
+}
+
+/* título dentro do overlay */
+#overlay h2 {
+  font-size: 28px;
+  color: #FFD700;
+  text-shadow: 0 0 28px #FFD700;
+  text-align: center;
+  line-height: 1.9;
+  white-space: pre-line;            /* respeita quebras de linha no texto */
+}
+
+
+/* ── botão JOGAR ─────────────────────────────────────────────── */
+#btnJogar {
+  font-family: "Press Start 2P", monospace;
+  font-size: 11px;
+  background: transparent;
+  color: #0ff;                      /* ciano */
+  border: 2px solid #0ff;
+  padding: 12px 26px;
+  cursor: pointer;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* efeito hover no botão */
+#btnJogar:hover {
+  background: #0ff;
+  color: #000;
+}
